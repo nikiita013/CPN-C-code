@@ -1,0 +1,63 @@
+digraph boxes_and_circles { 
+graph [overlap = true, fontsize = 10] 
+node [shape = circle, fixedsize = true, color = greenyellow, style = "filled", fontsize = 7] 
+Place1[ label = "Place 1" ]; Place18[ label = "Place 18" ]; Place7[ label = "Place 7" ]; Place13[ label = "Place 13" ]; Place2[ label = "Place 2" ]; 
+ node [shape = circle, fixedsize = true, color = powderblue, style = "filled", fontsize = 7] 
+ Place10[ label = "Place 10" ]; Place25[ label = "Place 25" ]; Place16[ label = "Place 16" ]; Place3[ label = "Place 3" ]; Place4[ label = "Place 4" ]; Place17[ label = "Place 17" ]; Place30[ label = "Place 30" ]; Place5[ label = "Place 5" ]; Place12[ label = "Place 12" ]; Place31[ label = "Place 31" ]; Place19[ label = "Place 19" ]; Place6[ label = "Place 6" ]; Place26[ label = "Place 26" ]; Place33[ label = "Place 33" ]; Place27[ label = "Place 27" ]; Place8[ label = "Place 8" ]; Place14[ label = "Place 14" ]; Place9[ label = "Place 9" ]; Place15[ label = "Place 15" ]; Place21[ label = "Place 21" ]; Place22[ label = "Place 22" ]; Place28[ label = "Place 28" ]; Place29[ label = "Place 29" ]; 
+ node [shape = box, fontname = Helvetica, color = gold, style = "filled", fontsize = 8, width = 1.25] 
+Transition16 [ label = "Transition 16 
+(BinaryOp: b > 3)" ]; Transition21 [ label = "Transition 21 
+(Assignment: a = #temp)" ]; Transition1 [ label = "Transition 1 
+(BinaryOp: a < 4)" ]; Transition7 [ label = "Transition 7" ]; Transition13 [ label = "Transition 13" ]; Transition18 [ label = "Transition 18" ]; Transition23 [ label = "Transition 23" ]; Transition2 [ label = "Transition 2 
+(BinaryOp: #temp != 0)" ]; Transition8 [ label = "Transition 8 
+(BinaryOp: 1 != 0)" ]; Transition24 [ label = "Transition 24" ]; Transition14 [ label = "Transition 14 
+(Assignment: a = 1)" ]; Transition3 [ label = "Transition 3" ]; Transition9 [ label = "Transition 9" ]; Transition19 [ label = "Transition 19 
+(Assignment: a = 0)" ]; Transition6 [ label = "Transition 6" ]; Transition12 [ label = "Transition 12" ]; Transition17 [ label = "Transition 17 
+(BinaryOp: #temp != 0)" ]; Transition25 [ label = "Transition 25 
+(Assignment: a = 5)" ]; Transition4 [ label = "Transition 4 
+(BinaryOp: a + 1)" ]; Transition10 [ label = "Transition 10 
+(BinaryOp: a + 1)" ]; Transition22 [ label = "Transition 22" ]; Transition15 [ label = "Transition 15 
+(BinaryOp: a < 2)" ]; Transition20 [ label = "Transition 20 
+(BinaryOp: a + 1)" ]; Transition5 [ label = "Transition 5 
+(Assignment: a = #temp)" ]; Transition11 [ label = "Transition 11 
+(Assignment: a = #temp)" ]; 
+Place9 -> Transition5 [ label = "#temp, #control "]; 
+ Place28 -> Transition20 [ label = "1, #control "]; 
+ Place15 -> Transition11 [ label = "#temp, #control "]; 
+ Place2 -> Transition21 [ label = "a "]; 
+ Place10 -> Transition6 [ label = "#control "]; 
+ Place2 -> Transition16 [ label = "b "]; 
+ Place16 -> Transition12 [ label = "#control "]; 
+ Place29 -> Transition21 [ label = "#temp, #control "]; 
+ Place5 -> Transition7 [ label = "#temp, #control (#temp == 0) "]; 
+ Place22 -> Transition16 [ label = "3, #control "]; 
+ Place2 -> Transition1 [ label = "a "]; 
+ Place3 -> Transition1 [ label = "4, #control "]; 
+ Place12 -> Transition13 [ label = "#temp, #control (#temp == 0) "]; 
+ Place27 -> Transition22 [ label = "#control "]; 
+ Place25 -> Transition18 [ label = "#temp, #control (#temp == 1) "]; 
+ Place2 -> Transition25 [ label = "a "]; 
+ Place4 -> Transition2 [ label = "#temp, #control "]; 
+ Place6 -> Transition8 [ label = "1, #control "]; 
+ Place30 -> Transition23 [ label = "#control "]; 
+ Place25 -> Transition24 [ label = "#temp, #control (#temp == 0) "]; 
+ Place5 -> Transition3 [ label = "#temp, #control (#temp == 1) "]; 
+ Place12 -> Transition9 [ label = "#temp, #control (#temp == 1) "]; 
+ Place2 -> Transition14 [ label = "a "]; 
+ Place31 -> Transition25 [ label = "5, #control "]; 
+ Place19 -> Transition14 [ label = "1, #control "]; 
+ Place2 -> Transition19 [ label = "a "]; 
+ Place26 -> Transition19 [ label = "0, #control "]; 
+ Place17 -> Transition17 [ label = "#temp, #control "]; 
+ Place2 -> Transition20 [ label = "a "]; 
+ Place2 -> Transition4 [ label = "a "]; 
+ Place2 -> Transition10 [ label = "a "]; 
+ Place8 -> Transition4 [ label = "1, #control "]; 
+ Place14 -> Transition10 [ label = "1, #control "]; 
+ Place2 -> Transition15 [ label = "a "]; 
+ Place21 -> Transition15 [ label = "2, #control "]; 
+ Place2 -> Transition5 [ label = "a "]; 
+ Place2 -> Transition11 [ label = "a "]; 
+ Transition11 -> Place2 [ label = "a "]; Transition20 -> Place28 [ label = "1 "]; Transition5 -> Place10 [ label = "#control "]; Transition20 -> Place2 [ label = "a "]; Transition11 -> Place16 [ label = "#control "]; Transition6 -> Place6 [ label = "#control "]; Transition16 -> Place17 [ label = "#control, #temp "]; Transition12 -> Place6 [ label = "#control "]; Transition21 -> Place2 [ label = "a "]; Transition1 -> Place4 [ label = "#control, #temp "]; Transition7 -> Place6 [ label = "#control "]; Transition16 -> Place22 [ label = "3 "]; Transition21 -> Place30 [ label = "#control "]; Transition16 -> Place2 [ label = "b "]; Transition1 -> Place3 [ label = "4 "]; Transition17 -> Place25 [ label = "#control, #temp "]; Transition22 -> Place28 [ label = "#control "]; Transition1 -> Place2 [ label = "a "]; Transition13 -> Place17 [ label = "#control "]; Transition23 -> Place21 [ label = "#control "]; Transition18 -> Place26 [ label = "#control "]; Transition2 -> Place5 [ label = "#control, #temp "]; Transition8 -> Place12 [ label = "#control, #temp "]; Transition8 -> Place6 [ label = "1 "]; Transition14 -> Place19 [ label = "1 "]; Transition24 -> Place31 [ label = "#control "]; Transition25 -> Place2 [ label = "a "]; Transition3 -> Place8 [ label = "#control "]; Transition9 -> Place14 [ label = "#control "]; Transition14 -> Place2 [ label = "a "]; Transition19 -> Place26 [ label = "0 "]; Transition25 -> Place31 [ label = "5 "]; Transition19 -> Place2 [ label = "a "]; Transition25 -> Place33 [ label = "#control "]; Transition14 -> Place21 [ label = "#control "]; Transition19 -> Place27 [ label = "#control "]; Transition4 -> Place9 [ label = "#control, #temp "]; Transition10 -> Place15 [ label = "#control, #temp "]; Transition15 -> Place2 [ label = "a "]; Transition4 -> Place8 [ label = "1 "]; Transition10 -> Place14 [ label = "1 "]; Transition15 -> Place22 [ label = "#control, #temp "]; Transition4 -> Place2 [ label = "a "]; Transition10 -> Place2 [ label = "a "]; Transition20 -> Place29 [ label = "#control, #temp "]; Transition15 -> Place21 [ label = "2 "]; Transition5 -> Place2 [ label = "a "]; 
+ } 
+ ")
